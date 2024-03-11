@@ -21,3 +21,7 @@ def todo_params
     params.require(:todo).permit(:name, :description)
  end
 end
+
+def edit
+  @todo = Todo.find(params[:id])
+end
